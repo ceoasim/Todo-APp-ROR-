@@ -1,0 +1,33 @@
+<%# _ means partial that is used to resuse componenets. %>
+
+
+<%= render "header" %>
+<%
+=begin%>
+ <div class="col-6" style="margin: 0 auto:"> 
+<%
+=end%>
+<h1>Contact</h1>
+<div class="col-6" style="margin: 0 auto;">
+<form method="POST" action="/add">
+
+<%= token_tag %>
+<div class="mb-3">
+  <label for="titleid" class="form-label">Title</label>
+  <input name= "title" type="text" class="form-control" id="titleid">
+</div>
+<div class="mb-3">
+  <label for="descid" class="form-label">Description</label>
+  <textarea name="description" class="form-control" id="descid" rows="3"></textarea>
+</div>
+<div class="mb-3">
+<input type="submit" class="btn btn-primary" value="Add" style="display: block; margin: 0 auto;"/>
+</div>
+</form>
+</div>
+<%
+=begin%>
+ </div>  
+<%
+=end%>
+<%= render "footer" %>
